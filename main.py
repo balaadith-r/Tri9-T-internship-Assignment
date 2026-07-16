@@ -4,6 +4,8 @@ from parser.tree_builder import TreeBuilder
 from parser.table_extractor import TableExtractor
 from parser.table_mapper import TableMapper
 from parser.hashing import NodeHasher
+from database.database import SessionLocal
+from database.repository import DocumentRepository
 
 PDF_PATH = "data/ct200_manual.pdf"
 
@@ -76,4 +78,24 @@ def print_tree(nodes, indent=0):
         print_tree(node.children, indent + 4)
 
 
-print_tree(tree.roots)
+#print_tree(tree.roots)
+
+db = SessionLocal()
+
+repo = DocumentRepository(db)
+
+flat = repo._flatten_tree(tree)
+
+print()
+
+print(f"Flattened Nodes: {len(flat)}\n")
+
+for node, parent in flat:
+
+    parent_heading = parent.heading if parent else "ROOT"
+
+    print(
+        f"{node.section_number:<10}"
+        f"{node.heading:<40}"
+        f" Parent -> {parent_heading}"
+    )
