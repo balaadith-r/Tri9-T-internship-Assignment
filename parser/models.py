@@ -63,6 +63,8 @@ class Node(BaseModel):
 
     node_id: str
 
+    parent_id: Optional[str]
+
     section_number: str
 
     heading: str

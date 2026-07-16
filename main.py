@@ -1,5 +1,7 @@
 from parser.extractor import PDFExtractor
 from parser.classifier import HeadingClassifier
+from parser.tree_builder import TreeBuilder
+
 
 extractor = PDFExtractor("data/ct200_manual.pdf")
 
@@ -9,27 +11,22 @@ classifier = HeadingClassifier()
 
 parsed = classifier.classify(raw_blocks)
 
-heading_count = 0
+builder = TreeBuilder()
 
-paragraph_count = 0
+tree = builder.build(parsed)
 
-for block in parsed:
 
-    if block.type == "heading":
+def print_tree(nodes, indent=0):
 
-        heading_count += 1
+    for node in nodes:
 
         print(
-            f"[H] "
-            f"{block.section_number:<8}"
-            f"{block.heading}"
+            " " * indent +
+            f"{node.section_number} {node.heading}"
+            f"({len(node.body)} chars)"
         )
 
-    else:
+        print_tree(node.children, indent + 4)
+    
 
-        paragraph_count += 1
-
-print()
-
-print(f"Headings   : {heading_count}")
-print(f"Paragraphs : {paragraph_count}")
+print_tree(tree.roots)
