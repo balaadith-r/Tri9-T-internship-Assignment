@@ -6,14 +6,24 @@ from parser.table_mapper import TableMapper
 from parser.hashing import NodeHasher
 from database.database import SessionLocal
 from database.repository import DocumentRepository
+from parser.block_filter import BlockFilter
 
 PDF_PATH = "data/ct200_manual.pdf"
 
-# ----------------------------
 # Extract raw text blocks
-# ----------------------------
 extractor = PDFExtractor(PDF_PATH)
 raw_blocks = extractor.extract()
+
+# Extract tables
+table_extractor = TableExtractor(PDF_PATH)
+tables = table_extractor.extract()
+
+# Remove table text blocks
+block_filter = BlockFilter()
+raw_blocks = block_filter.remove_table_blocks(
+    raw_blocks,
+    tables,
+)
 
 # ----------------------------
 # Classify headings & paragraphs
@@ -84,18 +94,10 @@ db = SessionLocal()
 
 repo = DocumentRepository(db)
 
-flat = repo._flatten_tree(tree)
+doc_id = repo.save_document(
+    tree,
+    "CT200",
+    1,
+)
 
-print()
-
-print(f"Flattened Nodes: {len(flat)}\n")
-
-for node, parent in flat:
-
-    parent_heading = parent.heading if parent else "ROOT"
-
-    print(
-        f"{node.section_number:<10}"
-        f"{node.heading:<40}"
-        f" Parent -> {parent_heading}"
-    )
+print(f"Document ID: {doc_id}")
