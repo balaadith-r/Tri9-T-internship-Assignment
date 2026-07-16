@@ -11,12 +11,30 @@ class DocumentRepository:
     def __init__(self, db: Session):
         self.db = db
 
+    def get_latest_version(
+        self,
+        document_name: str,
+    ) -> int:
+
+        latest = (
+            self.db.query(Document)
+            .filter(Document.document_name == document_name)
+            .order_by(Document.version.desc())
+            .first()
+        )
+
+        if latest is None:
+            return 0
+
+        return latest.version
+
     def save_document(
         self,
         tree: DocumentTree,
         document_name: str,
-        version: int,
-    ):
+    ) -> Document:
+
+        version = self.get_latest_version(document_name) + 1
 
         # ----------------------------
         # Save document
@@ -96,7 +114,7 @@ class DocumentRepository:
 
         self.db.commit()
 
-        return document.id
+        return document
 
     def _flatten_tree(
         self,

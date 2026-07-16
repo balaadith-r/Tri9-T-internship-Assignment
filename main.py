@@ -4,100 +4,120 @@ from parser.tree_builder import TreeBuilder
 from parser.table_extractor import TableExtractor
 from parser.table_mapper import TableMapper
 from parser.hashing import NodeHasher
-from database.database import SessionLocal
-from database.repository import DocumentRepository
 from parser.block_filter import BlockFilter
 
-PDF_PATH = "data/ct200_manual.pdf"
+from database.database import SessionLocal
+from database.repository import DocumentRepository
+from services.version_comparator import VersionComparator
 
+
+#PDF_PATH = "data/ct200_manual.pdf"
+PDF_PATH = "data/ct200_manual_v2.pdf"
+
+
+# ----------------------------
 # Extract raw text blocks
+# ----------------------------
+
 extractor = PDFExtractor(PDF_PATH)
 raw_blocks = extractor.extract()
 
+
+# ----------------------------
 # Extract tables
+# ----------------------------
+
 table_extractor = TableExtractor(PDF_PATH)
 tables = table_extractor.extract()
 
+
+# ----------------------------
 # Remove table text blocks
+# ----------------------------
+
 block_filter = BlockFilter()
+
 raw_blocks = block_filter.remove_table_blocks(
     raw_blocks,
     tables,
 )
 
+
 # ----------------------------
-# Classify headings & paragraphs
+# Classify headings
 # ----------------------------
+
 classifier = HeadingClassifier()
 parsed_blocks = classifier.classify(raw_blocks)
+
 
 # ----------------------------
 # Build document tree
 # ----------------------------
+
 builder = TreeBuilder()
 tree = builder.build(parsed_blocks)
 
-# ----------------------------
-# Extract tables
-# ----------------------------
-table_extractor = TableExtractor(PDF_PATH)
-tables = table_extractor.extract()
 
 # ----------------------------
-# Attach tables to nodes
+# Attach tables
 # ----------------------------
+
 mapper = TableMapper()
-tree = mapper.attach_tables(tree, tables)
+tree = mapper.attach_tables(
+    tree,
+    tables,
+)
+
 
 # ----------------------------
 # Compute hashes
 # ----------------------------
+
 hasher = NodeHasher()
 hasher.hash_tree(tree)
 
 
 # ----------------------------
-# Debug Print
+# Save document
 # ----------------------------
-def print_tree(nodes, indent=0):
-    for node in nodes:
-
-        print(" " * indent + f"{node.section_number} {node.heading}")
-
-        print(
-            " " * (indent + 4) +
-            f"Logical Hash : {node.logical_hash[:10]}..."
-        )
-
-        print(
-            " " * (indent + 4) +
-            f"Content Hash : {node.content_hash[:10]}..."
-        )
-
-        if node.tables:
-            for table in node.tables:
-                print(
-                    " " * (indent + 4) +
-                    f"Headers: {table.headers}"
-                )
-                print(
-                    " " * (indent + 4) +
-                    f"Rows: {len(table.rows)}"
-                )
-
-        print_tree(node.children, indent + 4)
-
-
-#print_tree(tree.roots)
 
 db = SessionLocal()
 
 repo = DocumentRepository(db)
 
-doc_id = repo.save_document(
+document = repo.save_document(
     tree,
     "CT200",
-    1,
 )
 
-print(f"Document ID: {doc_id}")
+print(
+    f"Saved Version {document.version}"
+)
+
+if document.version > 1:
+
+    comparator = VersionComparator(db)
+
+    report = comparator.compare(
+        "CT200",
+        document.version - 1,
+        document.version,
+    )
+
+    print("\n----- Comparison Report -----")
+    print("\n----- Added -----")
+    for change in report.added:
+        print(change.new_node.section_number, "-", change.new_node.heading)
+
+    print("\n----- Removed -----")
+    for change in report.removed:
+        print(change.old_node.section_number, "-", change.old_node.heading)
+
+    print("\n----- Modified -----")
+    for change in report.modified:
+        print(change.old_node.section_number, "-", change.old_node.heading)
+
+    print("\n----- Unchanged -----")
+    for change in report.unchanged:
+        print(change.old_node.section_number, "-", change.old_node.heading)
