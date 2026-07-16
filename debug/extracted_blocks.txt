@@ -1,0 +1,782 @@
+TOTAL BLOCKS : 65
+
+================================================================================
+Block ID   : 0
+Page       : 1
+Font       : NimbusSans-Bold
+Font Size  : 22.0
+Bold       : True
+BBox       : (33.0, 62.26000213623047, 376.5079650878906, 145.35400390625)
+
+TEXT
+----------------------------------------
+CardioTrack CT-200 Home Blood Pressure Monitor — Technical & User Manual
+
+================================================================================
+Block ID   : 1
+Page       : 1
+Font       : NimbusSans-Bold
+Font Size  : 16.5
+Bold       : True
+BBox       : (33.0, 186.29501342773438, 182.5065155029297, 209.01551818847656)
+
+TEXT
+----------------------------------------
+1. Device Overview
+
+================================================================================
+Block ID   : 2
+Page       : 1
+Font       : NimbusSans-Regular
+Font Size  : 11.0
+Bold       : False
+BBox       : (33.0, 227.77500915527344, 377.14593505859375, 282.489013671875)
+
+TEXT
+----------------------------------------
+The CardioTrack CT-200 is an oscillometric, upper-arm blood pressure monitor intended for home use by adult users. It measures systolic pressure, diastolic pressure, and pulse rate, and stores up to 200 readings across two user proﬁles.
+
+================================================================================
+Block ID   : 3
+Page       : 1
+Font       : NimbusSans-Bold
+Font Size  : 12.869999885559082
+Bold       : True
+BBox       : (33.0, 304.1820983886719, 135.2779083251953, 321.9040832519531)
+
+TEXT
+----------------------------------------
+1.1 Intended Use
+
+================================================================================
+Block ID   : 4
+Page       : 1
+Font       : NimbusSans-Regular
+Font Size  : 11.0
+Bold       : False
+BBox       : (33.0, 332.75897216796875, 375.9799499511719, 400.67303466796875)
+
+TEXT
+----------------------------------------
+The CT-200 is intended to non-invasively measure blood pressure and pulse rate in adults with an arm circumference of 22–42 cm. It is not intended for use on neonates, infants, or pregnant users, and is not a diagnostic device — readings should be interpreted by a qualiﬁed clinician.
+
+================================================================================
+Block ID   : 5
+Page       : 1
+Font       : NimbusSans-Bold
+Font Size  : 12.869999885559082
+Bold       : True
+BBox       : (33.0, 422.36614990234375, 261.8543701171875, 440.088134765625)
+
+TEXT
+----------------------------------------
+1.2 Indications and Contraindications
+
+================================================================================
+Block ID   : 6
+Page       : 1
+Font       : NimbusSans-Regular
+Font Size  : 11.0
+Bold       : False
+BBox       : (33.0, 450.9430236816406, 378.3779602050781, 505.6570739746094)
+
+TEXT
+----------------------------------------
+The device should not be used on the arm ipsilateral to a mastectomy, on limbs with an active intravenous line, or on users with severe arrhythmia without clinician guidance, since oscillometric measurement can be unreliable in these cases.
+
+================================================================================
+Block ID   : 7
+Page       : 1
+Font       : NimbusSans-Bold
+Font Size  : 16.5
+Bold       : True
+BBox       : (33.0, 530.363037109375, 346.6485900878906, 553.0835571289062)
+
+TEXT
+----------------------------------------
+2. Physical and Electrical Speciﬁcations
+
+================================================================================
+Block ID   : 8
+Page       : 2
+Font       : NimbusSans-Bold
+Font Size  : 12.869999885559082
+Bold       : True
+BBox       : (33.0, 43.68210220336914, 193.23150634765625, 61.40409469604492)
+
+TEXT
+----------------------------------------
+2.1 General Speciﬁcations
+
+================================================================================
+Block ID   : 9
+Page       : 2
+Font       : NimbusSans-Bold
+Font Size  : 11.0
+Bold       : True
+BBox       : (66.09249877929688, 76.06398010253906, 254.77999877929688, 91.21098327636719)
+
+TEXT
+----------------------------------------
+Parameter Value
+
+================================================================================
+Block ID   : 10
+Page       : 2
+Font       : NimbusSans-Regular
+Font Size  : 11.0
+Bold       : False
+BBox       : (39.5, 95.70899963378906, 221.427978515625, 110.822998046875)
+
+TEXT
+----------------------------------------
+Measurement method Oscillometric
+
+================================================================================
+Block ID   : 11
+Page       : 2
+Font       : NimbusSans-Regular
+Font Size  : 11.0
+Bold       : False
+BBox       : (39.5, 115.40901184082031, 224.50796508789062, 130.52301025390625)
+
+TEXT
+----------------------------------------
+Pressure range 0–299 mmHg
+
+================================================================================
+Block ID   : 12
+Page       : 2
+Font       : NimbusSans-Regular
+Font Size  : 11.0
+Bold       : False
+BBox       : (39.5, 135.10902404785156, 219.6349639892578, 150.2230224609375)
+
+TEXT
+----------------------------------------
+Pulse range 40–199 bpm
+
+================================================================================
+Block ID   : 13
+Page       : 2
+Font       : NimbusSans-Regular
+Font Size  : 11.0
+Bold       : False
+BBox       : (39.5, 154.8090362548828, 206.4679718017578, 169.92303466796875)
+
+TEXT
+----------------------------------------
+Accuracy (pressure) ±3 mmHg
+
+================================================================================
+Block ID   : 14
+Page       : 2
+Font       : NimbusSans-Regular
+Font Size  : 11.0
+Bold       : False
+BBox       : (39.5, 174.50904846191406, 180.80499267578125, 189.623046875)
+
+TEXT
+----------------------------------------
+Accuracy (pulse) ±5%
+
+================================================================================
+Block ID   : 15
+Page       : 2
+Font       : NimbusSans-Regular
+Font Size  : 11.0
+Bold       : False
+BBox       : (39.5, 194.2090606689453, 321.7259826660156, 209.32305908203125)
+
+TEXT
+----------------------------------------
+Power source 4x AA batteries or 6V DC adapter
+
+================================================================================
+Block ID   : 16
+Page       : 2
+Font       : NimbusSans-Regular
+Font Size  : 11.0
+Bold       : False
+BBox       : (39.5, 213.90907287597656, 215.93899536132812, 229.0230712890625)
+
+TEXT
+----------------------------------------
+Display Backlit LCD
+
+================================================================================
+Block ID   : 17
+Page       : 2
+Font       : NimbusSans-Bold
+Font Size  : 11.0
+Bold       : True
+BBox       : (33.0, 252.41407775878906, 229.23997497558594, 267.56109619140625)
+
+TEXT
+----------------------------------------
+2.1.1.1 Battery Life Under Typical Use
+
+================================================================================
+Block ID   : 18
+Page       : 2
+Font       : NimbusSans-Regular
+Font Size  : 11.0
+Bold       : False
+BBox       : (33.0, 276.55908203125, 357.9840087890625, 331.27313232421875)
+
+TEXT
+----------------------------------------
+Under typical use (three measurements per day), four AA alkaline batteries provide approximately 300 measurement cycles before requiring replacement. The device displays a low ‑ battery icon once remaining capacity falls below 15%.
+
+================================================================================
+Block ID   : 19
+Page       : 2
+Font       : NimbusSans-Bold
+Font Size  : 12.869999885559082
+Bold       : True
+BBox       : (33.0, 352.9662170410156, 171.03076171875, 370.6882019042969)
+
+TEXT
+----------------------------------------
+2.2 Cuﬀ Speciﬁcations
+
+================================================================================
+Block ID   : 20
+Page       : 2
+Font       : NimbusSans-Regular
+Font Size  : 11.0
+Bold       : False
+BBox       : (33.0, 381.54315185546875, 385.49493408203125, 436.2572021484375)
+
+TEXT
+----------------------------------------
+The standard cuﬀ supplied with the CT ‑ 200 ﬁts arm circumferences of 22–32 cm. A separate large cuﬀ (part number CT200 ‑ LC) is available for 32–42 cm and must be ordered separately; using the standard cuﬀ outside its rated range will produce inaccurate readings.
+
+================================================================================
+Block ID   : 21
+Page       : 2
+Font       : NimbusSans-Bold
+Font Size  : 16.5
+Bold       : True
+BBox       : (33.0, 460.9631652832031, 187.06051635742188, 483.68365478515625)
+
+TEXT
+----------------------------------------
+3. Device Operation
+
+================================================================================
+Block ID   : 22
+Page       : 2
+Font       : NimbusSans-Bold
+Font Size  : 12.869999885559082
+Bold       : True
+BBox       : (33.0, 515.05029296875, 264.7372131347656, 532.7722778320312)
+
+TEXT
+----------------------------------------
+3.1 Powering On and Proﬁle Selection
+
+================================================================================
+Block ID   : 23
+Page       : 2
+Font       : NimbusSans-Regular
+Font Size  : 11.0
+Bold       : False
+BBox       : (33.0, 543.6271362304688, 383.9769592285156, 558.7411499023438)
+
+TEXT
+----------------------------------------
+Press and hold the power button for one second to power on the device.
+
+================================================================================
+Block ID   : 24
+Page       : 3
+Font       : NimbusSans-Regular
+Font Size  : 11.0
+Bold       : False
+BBox       : (33.0, 31.075023651123047, 380.2479553222656, 72.58892822265625)
+
+TEXT
+----------------------------------------
+Use the proﬁle button to select User 1 or User 2 before beginning a measurement; readings are stored against whichever proﬁle is active at the time of measurement.
+
+================================================================================
+Block ID   : 25
+Page       : 3
+Font       : NimbusSans-Bold
+Font Size  : 11.0
+Bold       : True
+BBox       : (33.0, 92.72987365722656, 174.19598388671875, 107.87687683105469)
+
+TEXT
+----------------------------------------
+3.2 Cuﬀ Inﬂation Sequence
+
+================================================================================
+Block ID   : 26
+Page       : 3
+Font       : NimbusSans-Regular
+Font Size  : 11.0
+Bold       : False
+BBox       : (33.0, 116.87483215332031, 386.3970031738281, 184.78863525390625)
+
+TEXT
+----------------------------------------
+On starting a measurement, the device inﬂates the cuﬀ to an initial target of 180 mmHg. If the user's pulse is not detected by 180 mmHg, the device inﬂates in 40 mmHg increments up to a maximum of 299 mmHg before aborting with an error. Deﬂation occurs in controlled steps of approximately 3 mmHg to capture oscillometric pulse data.
+
+================================================================================
+Block ID   : 27
+Page       : 3
+Font       : NimbusSans-Bold
+Font Size  : 12.869999885559082
+Bold       : True
+BBox       : (33.0, 206.48165893554688, 132.3821563720703, 224.2036590576172)
+
+TEXT
+----------------------------------------
+3.4 Auto Shutoﬀ
+
+================================================================================
+Block ID   : 28
+Page       : 3
+Font       : NimbusSans-Regular
+Font Size  : 11.0
+Bold       : False
+BBox       : (33.0, 235.0585479736328, 384.5379943847656, 276.57244873046875)
+
+TEXT
+----------------------------------------
+To conserve battery, the CT ‑ 200 automatically powers oﬀ after 60 seconds of inactivity on the home screen, and after 3 minutes of inactivity if a measurement screen is left open without starting a reading.
+
+================================================================================
+Block ID   : 29
+Page       : 3
+Font       : NimbusSans-Bold
+Font Size  : 12.869999885559082
+Bold       : True
+BBox       : (33.0, 298.2654724121094, 256.8736572265625, 315.9874572753906)
+
+TEXT
+----------------------------------------
+3.3 Result Display and Classiﬁcation
+
+================================================================================
+Block ID   : 30
+Page       : 3
+Font       : NimbusSans-Regular
+Font Size  : 11.0
+Bold       : False
+BBox       : (33.0, 326.84234619140625, 380.2698974609375, 394.75616455078125)
+
+TEXT
+----------------------------------------
+After a completed measurement, the device displays systolic pressure, diastolic pressure, and pulse rate simultaneously, along with a classiﬁcation indicator (see 2.1, 4.3 for related speciﬁcations and alarm thresholds) based on the most recent joint clinical guidance available at time of manufacture.
+
+================================================================================
+Block ID   : 31
+Page       : 3
+Font       : NimbusSans-Regular
+Font Size  : 11.0
+Bold       : False
+BBox       : (50.76799774169922, 403.84210205078125, 366.2149658203125, 484.95587158203125)
+
+TEXT
+----------------------------------------
+1. Normal: systolic < 120 and diastolic < 80 2. Elevated: systolic 120–129 and diastolic < 80 3. Hypertension Stage 1: systolic 130–139 or diastolic 80–89 4. Hypertension Stage 2: systolic ≥ 140 or diastolic ≥ 90 5. Hypertensive Crisis: systolic > 180 or diastolic > 120 — device recommends seeking immediate medical attention
+
+================================================================================
+Block ID   : 32
+Page       : 3
+Font       : NimbusSans-Bold
+Font Size  : 16.5
+Bold       : True
+BBox       : (33.0, 509.6617736816406, 270.5009765625, 532.3822631835938)
+
+TEXT
+----------------------------------------
+4. Alarms and Safety Behavior
+
+================================================================================
+Block ID   : 33
+Page       : 4
+Font       : NimbusSans-Bold
+Font Size  : 12.869999885559082
+Bold       : True
+BBox       : (33.0, 30.81210708618164, 205.3807830810547, 48.53409957885742)
+
+TEXT
+----------------------------------------
+4.1 Overpressure Protection
+
+================================================================================
+Block ID   : 34
+Page       : 4
+Font       : NimbusSans-Regular
+Font Size  : 11.0
+Bold       : False
+BBox       : (33.0, 59.38898849487305, 383.31695556640625, 114.10284423828125)
+
+TEXT
+----------------------------------------
+If cuﬀ pressure exceeds 299 mmHg at any point, or exceeds 300 mmHg for longer than 3 seconds due to sensor fault, the device immediately triggers an emergency deﬂation valve, halting inﬂation and venting the cuﬀ within 2 seconds, independent of the main ﬁrmware control loop.
+
+================================================================================
+Block ID   : 35
+Page       : 4
+Font       : NimbusSans-Bold
+Font Size  : 12.869999885559082
+Bold       : True
+BBox       : (33.0, 135.79586791992188, 128.84291076660156, 153.5178680419922)
+
+TEXT
+----------------------------------------
+4.2 Error Codes
+
+================================================================================
+Block ID   : 36
+Page       : 4
+Font       : NimbusSans-Bold
+Font Size  : 11.0
+Bold       : True
+BBox       : (39.5, 168.17774963378906, 340.90814208984375, 183.3247528076172)
+
+TEXT
+----------------------------------------
+Code Meaning Device Behavior
+
+================================================================================
+Block ID   : 37
+Page       : 4
+Font       : NimbusSans-Regular
+Font Size  : 11.0
+Bold       : False
+BBox       : (39.5, 187.8227081298828, 184.17095947265625, 216.13665771484375)
+
+TEXT
+----------------------------------------
+E1 Cuﬀ not connected or leak detected
+
+================================================================================
+Block ID   : 38
+Page       : 4
+Font       : NimbusSans-Regular
+Font Size  : 11.0
+Bold       : False
+BBox       : (215.7252655029297, 187.8227081298828, 380.1752624511719, 202.93670654296875)
+
+TEXT
+----------------------------------------
+Aborts measurement, displays E1
+
+================================================================================
+Block ID   : 39
+Page       : 4
+Font       : NimbusSans-Regular
+Font Size  : 11.0
+Bold       : False
+BBox       : (39.5, 220.7226104736328, 193.33396911621094, 249.03656005859375)
+
+TEXT
+----------------------------------------
+E2 Motion artifact detected during measurement
+
+================================================================================
+Block ID   : 40
+Page       : 4
+Font       : NimbusSans-Regular
+Font Size  : 11.0
+Bold       : False
+BBox       : (215.7252655029297, 220.7226104736328, 363.66424560546875, 249.03656005859375)
+
+TEXT
+----------------------------------------
+Aborts measurement, displays E2, prompts retry
+
+================================================================================
+Block ID   : 41
+Page       : 4
+Font       : NimbusSans-Regular
+Font Size  : 11.0
+Bold       : False
+BBox       : (39.5, 253.6225128173828, 367.9652404785156, 281.93646240234375)
+
+TEXT
+----------------------------------------
+E3 Overpressure condition Auto-deﬂates within 2 seconds, displays E3
+
+================================================================================
+Block ID   : 42
+Page       : 4
+Font       : NimbusSans-Regular
+Font Size  : 11.0
+Bold       : False
+BBox       : (39.5, 286.52239990234375, 169.48597717285156, 314.83636474609375)
+
+TEXT
+----------------------------------------
+E4 Low battery during measurement
+
+================================================================================
+Block ID   : 43
+Page       : 4
+Font       : NimbusSans-Regular
+Font Size  : 11.0
+Bold       : False
+BBox       : (215.7252655029297, 286.52239990234375, 380.1752624511719, 301.63641357421875)
+
+TEXT
+----------------------------------------
+Aborts measurement, displays E4
+
+================================================================================
+Block ID   : 44
+Page       : 4
+Font       : NimbusSans-Regular
+Font Size  : 11.0
+Bold       : False
+BBox       : (39.5, 319.42230224609375, 363.0482482910156, 360.93621826171875)
+
+TEXT
+----------------------------------------
+E5 Internal sensor fault Device disables measurement function, displays E5 until serviced
+
+================================================================================
+Block ID   : 45
+Page       : 4
+Font       : NimbusSans-Bold
+Font Size  : 12.869999885559082
+Bold       : True
+BBox       : (33.0, 385.8792419433594, 163.88790893554688, 403.6012268066406)
+
+TEXT
+----------------------------------------
+4.3 Alarm Thresholds
+
+================================================================================
+Block ID   : 46
+Page       : 4
+Font       : NimbusSans-Regular
+Font Size  : 11.0
+Bold       : False
+BBox       : (33.0, 414.45611572265625, 375.9909362792969, 469.16998291015625)
+
+TEXT
+----------------------------------------
+The device does not sound an audible alarm for elevated readings by default; audible alarms are limited to the E1–E5 error conditions above and are user ‑ conﬁgurable in the settings menu, except for E3 (overpressure), which cannot be silenced for safety reasons.
+
+================================================================================
+Block ID   : 47
+Page       : 4
+Font       : NimbusSans-Bold
+Font Size  : 16.5
+Bold       : True
+BBox       : (33.0, 493.8760070800781, 192.5384979248047, 516.5964965820312)
+
+TEXT
+----------------------------------------
+5. Data Management
+
+================================================================================
+Block ID   : 48
+Page       : 5
+Font       : NimbusSans-Bold
+Font Size  : 12.869999885559082
+Bold       : True
+BBox       : (33.0, 30.81210708618164, 139.57647705078125, 48.53409957885742)
+
+TEXT
+----------------------------------------
+5.1 Local Storage
+
+================================================================================
+Block ID   : 49
+Page       : 5
+Font       : NimbusSans-Regular
+Font Size  : 11.0
+Bold       : False
+BBox       : (33.0, 59.38911056518555, 365.69500732421875, 114.10296630859375)
+
+TEXT
+----------------------------------------
+The CT ‑ 200 stores up to 100 readings per user proﬁle in non ‑ volatile memory. When storage is full, the oldest reading for that proﬁle is overwritten automatically; there is no user ‑ facing warning before this occurs.
+
+================================================================================
+Block ID   : 50
+Page       : 5
+Font       : NimbusSans-Bold
+Font Size  : 12.869999885559082
+Bold       : True
+BBox       : (33.0, 135.79623413085938, 148.8557586669922, 153.5182342529297)
+
+TEXT
+----------------------------------------
+5.2 Bluetooth Sync
+
+================================================================================
+Block ID   : 51
+Page       : 5
+Font       : NimbusSans-Regular
+Font Size  : 11.0
+Bold       : False
+BBox       : (33.0, 164.3732452392578, 383.9549865722656, 219.08709716796875)
+
+TEXT
+----------------------------------------
+The device can pair with the CardioTrack companion app via Bluetooth Low Energy. Readings sync automatically when the app is open and the device is within range; there is no manual "sync now" trigger in ﬁrmware version 1.x.
+
+================================================================================
+Block ID   : 52
+Page       : 5
+Font       : NimbusSans-Bold
+Font Size  : 16.5
+Bold       : True
+BBox       : (33.0, 243.79324340820312, 259.47900390625, 266.51373291015625)
+
+TEXT
+----------------------------------------
+6. Maintenance and Cleaning
+
+================================================================================
+Block ID   : 53
+Page       : 5
+Font       : NimbusSans-Bold
+Font Size  : 12.869999885559082
+Bold       : True
+BBox       : (33.0, 297.8804626464844, 186.050048828125, 315.6024475097656)
+
+TEXT
+----------------------------------------
+6.1 Cleaning Instructions
+
+================================================================================
+Block ID   : 54
+Page       : 5
+Font       : NimbusSans-Regular
+Font Size  : 11.0
+Bold       : False
+BBox       : (33.0, 326.45745849609375, 385.7699279785156, 367.97137451171875)
+
+TEXT
+----------------------------------------
+Wipe the device body and cuﬀ exterior with a soft, dry cloth or one lightly dampened with water. Do not submerge the device or cuﬀ, and do not use alcohol, solvents, or abrasive cleaners on the display.
+
+================================================================================
+Block ID   : 55
+Page       : 5
+Font       : NimbusSans-Bold
+Font Size  : 12.869999885559082
+Bold       : True
+BBox       : (33.0, 389.6646423339844, 121.68718719482422, 407.3866271972656)
+
+TEXT
+----------------------------------------
+6.2 Calibration
+
+================================================================================
+Block ID   : 56
+Page       : 5
+Font       : NimbusSans-Regular
+Font Size  : 11.0
+Bold       : False
+BBox       : (33.0, 418.24163818359375, 378.3999938964844, 472.95550537109375)
+
+TEXT
+----------------------------------------
+Anthropic recommends professional recalibration every 2 years or after any drop or signiﬁcant impact. The device does not perform self ‑ calibration; there is no ﬁeld calibration procedure available to end users.
+
+================================================================================
+Block ID   : 57
+Page       : 5
+Font       : NimbusSans-Bold
+Font Size  : 16.5
+Bold       : True
+BBox       : (33.0, 497.6616516113281, 181.51651000976562, 520.3821411132812)
+
+TEXT
+----------------------------------------
+7. Troubleshooting
+
+================================================================================
+Block ID   : 58
+Page       : 6
+Font       : NimbusSans-Bold
+Font Size  : 12.869999885559082
+Bold       : True
+BBox       : (33.0, 30.81210708618164, 128.84291076660156, 48.53409957885742)
+
+TEXT
+----------------------------------------
+7.1 Error Codes
+
+================================================================================
+Block ID   : 59
+Page       : 6
+Font       : NimbusSans-Regular
+Font Size  : 11.0
+Bold       : False
+BBox       : (33.0, 59.38911056518555, 380.0059814453125, 114.10296630859375)
+
+TEXT
+----------------------------------------
+If a code from Section 4.2 appears and persists after following the on ‑ screen retry prompt twice, users should discontinue use and contact CardioTrack support rather than attempting further self ‑ diagnosis, particularly for E5, which indicates an internal sensor fault.
+
+================================================================================
+Block ID   : 60
+Page       : 6
+Font       : NimbusSans-Bold
+Font Size  : 12.869999885559082
+Bold       : True
+BBox       : (33.0, 135.79623413085938, 191.77720642089844, 153.5182342529297)
+
+TEXT
+----------------------------------------
+7.2 Inconsistent Readings
+
+================================================================================
+Block ID   : 61
+Page       : 6
+Font       : NimbusSans-Regular
+Font Size  : 11.0
+Bold       : False
+BBox       : (33.0, 164.3732452392578, 385.7479553222656, 219.08709716796875)
+
+TEXT
+----------------------------------------
+Inconsistent readings between measurements are most commonly caused by cuﬀ mispositioning, talking or moving during measurement, or measuring within 30 minutes of exercise, caﬀeine, or smoking; the manual recommends resting quietly for 5 minutes before remeasuring.
+
+================================================================================
+Block ID   : 62
+Page       : 6
+Font       : NimbusSans-Bold
+Font Size  : 16.5
+Bold       : True
+BBox       : (33.0, 243.79324340820312, 232.86451721191406, 266.51373291015625)
+
+TEXT
+----------------------------------------
+8. Regulatory Information
+
+================================================================================
+Block ID   : 63
+Page       : 6
+Font       : NimbusSans-Bold
+Font Size  : 12.869999885559082
+Bold       : True
+BBox       : (33.0, 297.8804626464844, 138.14791870117188, 315.6024475097656)
+
+TEXT
+----------------------------------------
+8.1 Classiﬁcation
+
+================================================================================
+Block ID   : 64
+Page       : 6
+Font       : NimbusSans-Regular
+Font Size  : 11.0
+Bold       : False
+BBox       : (33.0, 326.45745849609375, 373.867919921875, 381.17132568359375)
+
+TEXT
+----------------------------------------
+The CT ‑ 200 is classiﬁed as a Class II medical device under applicable regulations for non ‑ invasive blood pressure monitors and has been validated against relevant clinical accuracy standards for oscillometric devices.
+

@@ -1,0 +1,2 @@
+-used numeric regex and bold text to classify headings, using size doesnt work as some headings are the same font size as the para text
+-
