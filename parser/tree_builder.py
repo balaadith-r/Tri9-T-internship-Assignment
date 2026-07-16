@@ -50,6 +50,8 @@ class TreeBuilder:
                 level=item.level,
 
                 page=item.block.page,
+
+                bbox=item.block.bbox,
             )
 
             # Root node

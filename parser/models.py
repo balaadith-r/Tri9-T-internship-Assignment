@@ -50,6 +50,8 @@ class TableBlock(BaseModel):
 
     page: int
 
+    bbox: Tuple[float, float, float, float]
+
     headers: List[str]
 
     rows: List[List[str]]
@@ -74,6 +76,8 @@ class Node(BaseModel):
     page: int
 
     body: str = ""
+    
+    bbox: Tuple[float, float, float, float]
 
     tables: List[TableBlock] = Field(default_factory=list)
 
