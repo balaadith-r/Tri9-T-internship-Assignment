@@ -1,2 +1,56 @@
--used numeric regex and bold text to classify headings, using size doesnt work as some headings are the same font size as the para text
--
+Approach
+
+1. Document Ingestion
+
+* Parse the input PDF.
+* Extract document sections and tables.
+* Build a hierarchical document tree.
+* Compute logical and content hashes for every node.
+* Store the document, nodes, and tables in SQLite.
+* Automatically assign a new version if the document already exists.
+
+2. Version Comparison
+
+* Compare two document versions using logical hashes.
+* Detect Added, Removed, Modified, and Unchanged sections using content hashes.
+* Provide an API to retrieve change summaries for individual sections.
+
+3. Document Browsing
+
+* Expose REST APIs to browse document sections, view nodes, search content, and retrieve specific document versions.
+
+4. Section Selection
+
+* Allow users to create reusable selections by grouping multiple document nodes.
+* Store selections in the relational database.
+
+5. AI Test Case Generation
+
+* Retrieve all nodes belonging to a selection.
+* Send the combined content to the configured LLM.
+* Generate structured test cases.
+* Store generated test suites in MongoDB with metadata.
+
+6. Test Case Retrieval
+
+* Retrieve the latest generated test suite.
+* View generation history.
+* Retrieve test suites associated with a specific document node.
+
+Technologies Used
+
+* FastAPI
+* SQLAlchemy
+* SQLite
+* MongoDB
+* OpenRouter / Google Gemini
+* Python
+
+Overall Workflow
+
+1. Manually ingest a PDF.
+2. Browse or search document sections.
+3. Create a selection of relevant nodes.
+4. Generate AI-powered test cases.
+5. Store generated test suites in MongoDB.
+6. Retrieve the latest or previous generations through the provided APIs.
