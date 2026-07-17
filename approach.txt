@@ -54,3 +54,14 @@ Overall Workflow
 4. Generate AI-powered test cases.
 5. Store generated test suites in MongoDB.
 6. Retrieve the latest or previous generations through the provided APIs.
+
+Decision Log
+
+What is the one part of this system most likely to silently give wrong results without erroring? How would you catch it?
+When entering a header that contains tables in the browseAPI feature the body comes out blank. this is becuase the table body is stored differently. this is something that can be fixed.
+
+Where did you choose simplicity over correctness because of time, and what would break first if this went to production as-is?
+document ingestion is performed manually instead of through an API or background service, in production it would not scale well because new documents would require manual intervention and there would be no automated ingestion workflow.
+
+Name one input (to your parser, your versioning matcher, or your LLM call) that you did not handle, and what your system does when it sees it.
+the parser is designed for pdfs structured like the provided ones, unaccounted for images. highly irregular layouts may break as the sample difference in the provided ones were fairly simple.

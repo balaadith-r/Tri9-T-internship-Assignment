@@ -307,7 +307,8 @@ using:
 - Generated test suites are stored in MongoDB.
 - Swagger UI is available for testing all APIs.
 
-to create the sqlite db after deletion cli command is:
+- to create the sqlite db after deletion cli command is:
     python3 create_db.py
+- ingest_document.py create_db.py check_staleness.py compare_versions.py create_selection.py generate_qa.py retirieve_qa.py view_qa.py. these are all cli runnable files that also perform the tasks.
 
 ---
