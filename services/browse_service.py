@@ -1,4 +1,4 @@
-from database.document_repository import DocumentRepository
+from database.repository import DocumentRepository
 from services.version_comparator import VersionComparator
 
 

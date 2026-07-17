@@ -24,6 +24,20 @@ class DocumentRepository:
             .order_by(Document.version.desc())
             .first()
         )
+    def get_document_version(
+        self,
+        document_name: str,
+        version: int,
+    ) -> Document | None:
+
+        return (
+            self.db.query(Document)
+            .filter(
+                Document.document_name == document_name,
+                Document.version == version,
+            )
+            .first()
+        )
     
     def get_latest_version(
         self,
@@ -234,3 +248,5 @@ class DocumentRepository:
             )
             .all()
         )
+    
+    
