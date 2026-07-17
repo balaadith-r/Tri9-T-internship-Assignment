@@ -97,7 +97,10 @@ The project is intended to be used in the following order.
 Run the document ingestion pipeline manually.
 
 To ingest a document the cli command is :
-    python3 ingest_document.py data/{doc_name}
+```bash
+python3 ingest_document.py data/CT200_manual.pdf
+```
+    
 
 The ingestion process:
 
@@ -299,6 +302,16 @@ using:
 
 ---
 
+## Unit Testing
+
+Basic unit tests are included for the document parser to verify the correctness of the parsing pipeline.
+
+Run the tests with:
+
+```bash
+python -m pytest
+```
+
 # Notes
 
 - Document ingestion is performed manually.
@@ -308,7 +321,11 @@ using:
 - Swagger UI is available for testing all APIs.
 
 - to create the sqlite db after deletion cli command is:
-    python3 create_db.py
-- ingest_document.py create_db.py check_staleness.py compare_versions.py create_selection.py generate_qa.py retirieve_qa.py view_qa.py. these are all cli runnable files that also perform the tasks.
+```bash
+python3 create_db.py
+```
+- 
+ingest_document.py create_db.py check_staleness.py compare_versions.py create_selection.py generate_qa.py retirieve_qa.py view_qa.py
+These are all cli runnable files that also perform the tasks.
 
 ---
