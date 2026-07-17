@@ -38,3 +38,12 @@ class QAStore:
         self.collection.delete_one(
             {"_id": ObjectId(mongo_id)}
         )
+        
+    def get_by_node_id(self, node_id: int):
+        return list(
+            self.collection.find(
+                {
+                    "test_cases.source_node_ids": node_id
+                }
+            ).sort("generated_at", -1)
+        )

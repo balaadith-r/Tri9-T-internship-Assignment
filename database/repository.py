@@ -1,7 +1,7 @@
 import json
 
 from sqlalchemy.orm import Session
-
+from sqlalchemy import or_
 from database.models import Document, Node, Table
 from parser.models import DocumentTree, Node as ParserNode
 
@@ -24,6 +24,7 @@ class DocumentRepository:
             .order_by(Document.version.desc())
             .first()
         )
+    
     def get_latest_version(
         self,
         document_name: str,
@@ -35,22 +36,6 @@ class DocumentRepository:
             return 0
 
         return latest.version
-    # def get_latest_version(
-    #     self,
-    #     document_name: str,
-    # ) -> int:
-
-    #     latest = (
-    #         self.db.query(Document)
-    #         .filter(Document.document_name == document_name)
-    #         .order_by(Document.version.desc())
-    #         .first()
-    #     )
-
-    #     if latest is None:
-    #         return 0
-
-    #     return latest.version
 
     def save_document(
         self,
@@ -200,4 +185,52 @@ class DocumentRepository:
                 Document.id == document_id,
             )
             .first()
+        )
+    def get_node(self, node_id: int) -> Node | None:
+        return (
+            self.db.query(Node)
+            .filter(Node.id == node_id)
+            .first()
+        )
+
+
+    def get_root_nodes(self, document_id: int) -> list[Node]:
+        return (
+            self.db.query(Node)
+            .filter(
+                Node.document_id == document_id,
+                Node.parent_id.is_(None),
+            )
+            .order_by(Node.section_number)
+            .all()
+        )
+
+
+    def get_children(self, parent_id: int) -> list[Node]:
+        return (
+            self.db.query(Node)
+            .filter(Node.parent_id == parent_id)
+            .order_by(Node.section_number)
+            .all()
+        )
+
+
+    from sqlalchemy import or_
+
+    def search_nodes(
+        self,
+        document_id: int,
+        query: str,
+    ) -> list[Node]:
+
+        return (
+            self.db.query(Node)
+            .filter(
+                Node.document_id == document_id,
+                or_(
+                    Node.heading.ilike(f"%{query}%"),
+                    Node.body.ilike(f"%{query}%"),
+                ),
+            )
+            .all()
         )
