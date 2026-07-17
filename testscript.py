@@ -1,39 +1,34 @@
 from database.database import SessionLocal
 from database.selection_repository import SelectionRepository
+
 from services.prompt_builder import PromptBuilder
+from services.llm.gemini_client import GeminiClient
 
 
 def main():
-    # Create database session
     db = SessionLocal()
 
     try:
-        # Load repository
         selection_repo = SelectionRepository(db)
 
-        # Change this to the selection you want to test
+        # Change if your selection has a different ID
         selection_id = 1
 
-        # Fetch nodes belonging to the selection
         nodes = selection_repo.get_selection_nodes(selection_id)
 
         if not nodes:
             print(f"No nodes found for selection {selection_id}")
             return
 
-        # Build prompt
-        prompt_builder = PromptBuilder()
-        prompt = prompt_builder.build(nodes)
+        prompt = PromptBuilder().build(nodes)
 
-        print("\n" + "=" * 80)
-        print("GENERATED PROMPT")
-        print("=" * 80 + "\n")
+        print("\nGenerating QA test suite...\n")
 
-        print(prompt)
+        llm = GeminiClient()
 
-        print("\n" + "=" * 80)
-        print("END OF PROMPT")
-        print("=" * 80)
+        suite = llm.generate_test_suite(prompt)
+
+        print(suite.model_dump_json(indent=2))
 
     finally:
         db.close()

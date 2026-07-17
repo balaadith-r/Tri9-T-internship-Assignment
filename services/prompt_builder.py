@@ -50,33 +50,19 @@ verification test:
 - return an empty "steps" array
 - explain what information is missing inside "expected_result"
 
-Return ONLY valid JSON matching this schema:
-
-{
-  "test_cases": [
-    {
-      "title": "string",
-      "preconditions": "string",
-      "steps": ["string"],
-      "expected_result": "string",
-      "source_sections": ["string"],
-      "source_node_ids": [0]
-    }
-  ]
-}
+Return the response using the provided response schema.
 
 Rules:
 
-1. Output ONLY valid JSON.
-2. Do NOT output Markdown.
-3. Do NOT output explanations.
-4. Do NOT wrap JSON inside code fences.
-5. Every expected_result must be directly supported by the manual.
-6. Preserve every numeric value exactly.
-7. Preserve every error code exactly.
-8. Every source_node_ids entry must correspond to the Node ID shown below.
-9. Every source_sections entry must correspond to the displayed section number.
-10. Prefer executable verification tests over descriptive summaries.
+1. Do NOT output Markdown.
+2. Do NOT output explanations.
+3. Do NOT wrap the response inside code fences.
+4. Every expected_result must be directly supported by the manual.
+5. Preserve every numeric value exactly.
+6. Preserve every error code exactly.
+7. Every source_node_ids entry must correspond to the Node ID shown below.
+8. Every source_sections entry must correspond to the displayed section number.
+9. Prefer executable verification tests over descriptive summaries.
 
 ======================================================================
 MANUAL EXCERPTS

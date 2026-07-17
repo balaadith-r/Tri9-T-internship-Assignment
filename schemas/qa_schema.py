@@ -1,4 +1,5 @@
 from pydantic import BaseModel, Field
+from datetime import datetime
 
 
 class TestCase(BaseModel):
@@ -26,6 +27,5 @@ class TestCase(BaseModel):
         description="Database node IDs used to create this test."
     )
 
-
-class QAResult(BaseModel):
+class GeneratedTestSuite(BaseModel):
     test_cases: list[TestCase]
