@@ -50,7 +50,24 @@ verification test:
 - return an empty "steps" array
 - explain what information is missing inside "expected_result"
 
-Return the response using the provided response schema.
+Return ONLY a valid JSON object.
+
+Do not include any text before or after the JSON.
+
+The JSON object MUST exactly follow this structure:
+
+{
+  "test_cases": [
+    {
+      "title": string,
+      "preconditions": string,
+      "steps": [string],
+      "expected_result": string,
+      "source_sections": [string],
+      "source_node_ids": [integer]
+    }
+  ]
+}
 
 Rules:
 

@@ -13,7 +13,7 @@ class GeminiClient(BaseLLMClient):
     def __init__(self):
         self.client = genai.Client(api_key=GEMINI_API_KEY)
 
-    def generate_test_suite(self, prompt: str) -> GeneratedTestSuite:
+    def generate(self, prompt: str) -> GeneratedTestSuite:
         response = self.client.models.generate_content(
             model=GEMINI_MODEL,
             contents=prompt,

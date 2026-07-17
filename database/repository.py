@@ -11,22 +11,46 @@ class DocumentRepository:
     def __init__(self, db: Session):
         self.db = db
 
+    def get_latest_document(
+        self,
+        document_name: str,
+    ) -> Document | None:
+
+        return (
+            self.db.query(Document)
+            .filter(
+                Document.document_name == document_name,
+            )
+            .order_by(Document.version.desc())
+            .first()
+        )
     def get_latest_version(
         self,
         document_name: str,
     ) -> int:
 
-        latest = (
-            self.db.query(Document)
-            .filter(Document.document_name == document_name)
-            .order_by(Document.version.desc())
-            .first()
-        )
+        latest = self.get_latest_document(document_name)
 
         if latest is None:
             return 0
 
         return latest.version
+    # def get_latest_version(
+    #     self,
+    #     document_name: str,
+    # ) -> int:
+
+    #     latest = (
+    #         self.db.query(Document)
+    #         .filter(Document.document_name == document_name)
+    #         .order_by(Document.version.desc())
+    #         .first()
+    #     )
+
+    #     if latest is None:
+    #         return 0
+
+    #     return latest.version
 
     def save_document(
         self,
@@ -163,4 +187,17 @@ class DocumentRepository:
                 Node.section_number,
             )
             .all()
+        )
+    
+    def get_document(
+        self,
+        document_id: int,
+    ) -> Document | None:
+
+        return (
+            self.db.query(Document)
+            .filter(
+                Document.id == document_id,
+            )
+            .first()
         )
