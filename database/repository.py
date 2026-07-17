@@ -115,7 +115,17 @@ class DocumentRepository:
         self.db.commit()
 
         return document
+    
+    def list_documents(self) -> list[Document]:
 
+        return (
+            self.db.query(Document)
+            .order_by(
+                Document.document_name,
+                Document.version,
+            )
+            .all()
+        )
     def _flatten_tree(
         self,
         tree: DocumentTree,
@@ -137,3 +147,20 @@ class DocumentRepository:
             dfs(root, None)
 
         return flattened
+    
+    def get_nodes(
+        self,
+        document_id: int,
+    ) -> list[Node]:
+
+        return (
+            self.db.query(Node)
+            .filter(
+                Node.document_id == document_id,
+            )
+            .order_by(
+                Node.page,
+                Node.section_number,
+            )
+            .all()
+        )

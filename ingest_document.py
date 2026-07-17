@@ -1,3 +1,5 @@
+import os
+import sys
 from parser.extractor import PDFExtractor
 from parser.classifier import HeadingClassifier
 from parser.tree_builder import TreeBuilder
@@ -8,11 +10,18 @@ from parser.block_filter import BlockFilter
 
 from database.database import SessionLocal
 from database.repository import DocumentRepository
-from services.version_comparator import VersionComparator
 
 
-#PDF_PATH = "data/ct200_manual.pdf"
-PDF_PATH = "data/ct200_manual_v2.pdf"
+if len(sys.argv) != 2:
+    print("Usage:")
+    print("python ingest_document.py <pdf_path>")
+    sys.exit(1)
+
+PDF_PATH = sys.argv[1]
+
+if not os.path.exists(PDF_PATH):
+    print(f"File not found: {PDF_PATH}")
+    sys.exit(1)
 
 
 # ----------------------------
@@ -64,6 +73,7 @@ tree = builder.build(parsed_blocks)
 # ----------------------------
 
 mapper = TableMapper()
+
 tree = mapper.attach_tables(
     tree,
     tables,
@@ -84,40 +94,13 @@ hasher.hash_tree(tree)
 
 db = SessionLocal()
 
-repo = DocumentRepository(db)
+repository = DocumentRepository(db)
 
-document = repo.save_document(
+document = repository.save_document(
     tree,
     "CT200",
 )
 
-print(
-    f"Saved Version {document.version}"
-)
+print(f"Successfully ingested CT200 Version {document.version}")
 
-if document.version > 1:
-
-    comparator = VersionComparator(db)
-
-    report = comparator.compare(
-        "CT200",
-        document.version - 1,
-        document.version,
-    )
-
-    print("\n----- Comparison Report -----")
-    print("\n----- Added -----")
-    for change in report.added:
-        print(change.new_node.section_number, "-", change.new_node.heading)
-
-    print("\n----- Removed -----")
-    for change in report.removed:
-        print(change.old_node.section_number, "-", change.old_node.heading)
-
-    print("\n----- Modified -----")
-    for change in report.modified:
-        print(change.old_node.section_number, "-", change.old_node.heading)
-
-    print("\n----- Unchanged -----")
-    for change in report.unchanged:
-        print(change.old_node.section_number, "-", change.old_node.heading)
+db.close()
